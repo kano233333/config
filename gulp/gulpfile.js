@@ -28,8 +28,8 @@ gulp.task('watch',async function(){
 });
 
 //jsx
-gulp.task('jsx-build', async function() {
-  browserify('./*.js')
+gulp.task('jsx-build', function() {
+  return browserify('./*.js')
     .transform(babelify, {
         presets: ['es2015', 'react']
     })
